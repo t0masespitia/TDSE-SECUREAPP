@@ -1,0 +1,10 @@
+com\tomas\securespringapp\model\User.class
+com\tomas\securespringapp\controller\AuthController.class
+com\tomas\securespringapp\dto\RegisterRequest.class
+com\tomas\securespringapp\config\SecurityConfig.class
+com\tomas\securespringapp\SecureSpringAppApplication.class
+com\tomas\securespringapp\controller\TestController.class
+com\tomas\securespringapp\dto\LoginRequest.class
+com\tomas\securespringapp\config\CorsConfig.class
+com\tomas\securespringapp\repository\UserRepository.class
+com\tomas\securespringapp\service\AuthService.class

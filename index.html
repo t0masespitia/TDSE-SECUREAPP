@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Seguro</title>
+</head>
+<body>
+  <h1>Inicio de sesión</h1>
+
+  <input type="text" id="username" placeholder="Usuario">
+  <input type="password" id="password" placeholder="Contraseña">
+  <button onclick="login()">Ingresar</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    async function login() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      try {
+        const response = await fetch("http://localhost:8080/api/auth/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ username, password })
+        });
+
+        const data = await response.text();
+        document.getElementById("resultado").innerText = data;
+      } catch (error) {
+        document.getElementById("resultado").innerText = "Error al conectar con el backend";
+      }
+    }
+  </script>
+</body>
+</html>
